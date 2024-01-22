@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 
 const NavBar = () => (
   <header className="w-full  absolute z-10">
-    <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-transparent">
+    <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-1 py-2 bg-transparent">
       <Logo />
 
       <CustomButton
