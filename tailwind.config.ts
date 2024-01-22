@@ -23,6 +23,8 @@ module.exports = {
           100: "rgba(59,60,152,0.02)",
         },
         grey: "#747A88",
+        "logo-g-left": '#c22c8f',
+        "logo-g-right": '#7466fb',
       },
       backgroundImage: {
         'pattern': "url('/pattern.png')",
