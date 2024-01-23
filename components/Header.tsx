@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <div className="header">
-      <div className="flex-1 pt-36 padding-x">
+      <div className="flex-1 padding-x">
         <h1 className="header__title">
           Find, book, rent a car—quick and super easy!
         </h1>
@@ -33,7 +33,7 @@ const Hero = () => {
       </div>
       <div className="header__image-container">
         <div className="header__image">
-          <Image src="/header.png" alt="header" fill className="object-contain" />
+          <Image src="/images/header.png" alt="header" fill className="object-contain" />
         </div>
 
         <div className="header__image-overlay" />

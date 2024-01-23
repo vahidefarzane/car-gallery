@@ -8,8 +8,8 @@ export const metadata = {
   description: "Discover world's best car showcase application",
   icons: [
     {
-      url: "/favicon.png",
-      href: "favicon.png"
+      url: "/images/favicon.png",
+      href: "/images/favicon.png"
     }
   ]
 };

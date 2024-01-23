@@ -6,7 +6,7 @@ export const Logo = () => {
     <Link href="/">
       <div className="flex hover:opacity-75 transition items-center ">
         <Image
-          src="/logo.png"
+          src="/images/logo.png"
           alt="logo"
           width={100}
           height={40}
