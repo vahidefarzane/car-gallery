@@ -23,13 +23,12 @@ module.exports = {
           100: "rgba(59,60,152,0.02)",
         },
         grey: "#747A88",
-        "logo-g-left": '#c22c8f',
-        "logo-g-right": '#7466fb',
+        "logo-g-left": "#c22c8f",
+        "logo-g-right": "#7466fb",
       },
       backgroundImage: {
-        'pattern': "url('/pattern.png')",
-        'header-bg': "url('/images/header-bg.png')"
-      }
+        pattern: "url('/pattern.png')",
+      },
     },
   },
   plugins: [],

@@ -48,8 +48,13 @@ export const deleteSearchParams = (type: string) => {
 export async function fetchCars() {
   // const { manufacturer, year, model, limit, fuel } = filters;
 
-  const { data } = await supabase.from("cars").select();
+  const { data } = await supabase.from("allcars").select("*");
   return { data };
 }
+export async function fetchCar(id: number) {
+  // const { manufacturer, year, model, limit, fuel } = filters;
 
+  const { data } = await supabase.from("allcars").select("*").eq("id", id);
 
+  return  {data}
+}

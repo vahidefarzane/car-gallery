@@ -10,7 +10,7 @@ import ShowMore from "@components/ShowMore";
 export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars();
   console.log(allCars);
-  const isDataEmpty = !allCars 
+  const isDataEmpty = !allCars;
 
   return (
     <main>
@@ -33,7 +33,7 @@ export default async function Home({ searchParams }: HomeProps) {
           <section>
             <div className="home__cars-wrapper">
               {allCars.data?.map((car: CarProps) => (
-                <CarCard car={car} />
+                <CarCard key={car.id} car={car} />
               ))}
             </div>
 

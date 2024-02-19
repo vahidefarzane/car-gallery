@@ -6,7 +6,6 @@ export default function NavBar() {
     <header className="w-full z-10 ">
       <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-1 py-2 bg-transparent">
         <Logo />
-
         <CustomButton
           title="Sign in"
           btnType="button"

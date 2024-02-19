@@ -37,17 +37,17 @@
 }
 /* END: General styles */
 
-/* START: Header styles */
+/* START: Hero styles */
 .header {
   @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
 }
 
 .header__title {
-  @apply 2xl:text-[72px] sm:text-[60px] text-[100px] font-extrabold;
+  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
 }
 
 .header__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-6;
+  @apply text-[27px] text-black-100 font-light mt-5;
 }
 
 .header__image-container {
@@ -58,10 +58,8 @@
   @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
 }
 
-.header__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/2  bg-header-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-x-hidden;
-}
-/* END: Header styles */
+
+/* END: Hero styles */
 
 /* START: Home styles */
 

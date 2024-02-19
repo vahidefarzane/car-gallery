@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
 import { calculateCarRent } from "@utils";
 import { CarProps } from "@types";
 import CustomButton from "./CustomButton";
 import CarDetails from "./CarDetails";
+import Link from "next/link";
 
 interface CarCardProps {
   car: CarProps;
@@ -39,12 +39,11 @@ const CarCard = ({ car }: CarCardProps) => {
 
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src={`/${id}.jpeg`}
+          src={`/${id}.jpg`}
           alt="car model"
+          fill
           priority
           className="object-contain"
-          width={500}
-          height={500}
         />
       </div>
 
@@ -72,13 +71,14 @@ const CarCard = ({ car }: CarCardProps) => {
         </div>
 
         <div className="car-card__btn-container">
-          <CustomButton
-            title="View More"
-            containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
-            textStyles="text-white text-[14px] leading-[17px] font-bold"
-            rightIcon="/images/right-arrow.svg"
-            handleClick={() => setIsOpen(true)}
-          />
+          <Link href={`/${id}`} className="w-full">
+            <CustomButton
+              title="View More"
+              containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+              textStyles="text-white text-[14px] leading-[17px] font-bold"
+              rightIcon="/images/right-arrow.svg"
+            />
+          </Link>
         </div>
       </div>
 

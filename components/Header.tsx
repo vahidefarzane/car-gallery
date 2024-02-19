@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <header className="header">
-      <div className="flex-1 padding-x">
+      <nav className="flex-1 padding-x">
         <h1 className="header__title">
           Find, book, rent a car—quick and super easy!
         </h1>
@@ -30,7 +30,7 @@ const Hero = () => {
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
           handleClick={handleScroll}
         />
-      </div>
+      </nav>
       <div className="header__image-container">
         <div className="header__image">
           <img
@@ -39,8 +39,6 @@ const Hero = () => {
             className="object-contain"
           />
         </div>
-
-        <div className="header__image-overlay" />
       </div>
     </header>
   );
