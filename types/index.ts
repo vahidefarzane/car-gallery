@@ -1,6 +1,7 @@
 import { MouseEventHandler } from "react";
 
 export interface CarProps {
+  id: number;
   city_mpg: number;
   class: string;
   combination_mpg: number;
@@ -28,6 +29,7 @@ export interface HomeProps {
 }
 
 export interface CarCardProps {
+  id: number;
   model: string;
   make: string;
   mpg: number;

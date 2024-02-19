@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import  CustomButton  from "./CustomButton";
+import CustomButton from "./CustomButton";
 
 const Hero = () => {
   const handleScroll = () => {
@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="flex-1 padding-x">
         <h1 className="header__title">
           Find, book, rent a car—quick and super easy!
@@ -33,12 +33,16 @@ const Hero = () => {
       </div>
       <div className="header__image-container">
         <div className="header__image">
-          <Image src="/images/header.png" alt="header" fill className="object-contain" />
+          <img
+            src="/images/header.png"
+            alt="header"
+            className="object-contain"
+          />
         </div>
 
         <div className="header__image-overlay" />
       </div>
-    </div>
+    </header>
   );
 };
 

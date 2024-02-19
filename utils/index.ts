@@ -1,4 +1,6 @@
 import { FilterProps } from "@types";
+import { CarProps } from "@types";
+import { supabase } from "../config/supabaseClient";
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
   const basePricePerDay = 50; // Base rental price per day in dollars
@@ -43,26 +45,11 @@ export const deleteSearchParams = (type: string) => {
   return newPathname;
 };
 
-export async function fetchCars(filters: FilterProps) {
-  const { manufacturer, year, model, limit, fuel } = filters;
+export async function fetchCars() {
+  // const { manufacturer, year, model, limit, fuel } = filters;
 
-  // Set the required headers for the API request
-  const headers: HeadersInit = {
-    "X-RapidAPI-Key": "e5f1b27173msh7dd945e04f25afep148977jsn634ffbd4efcc",
-    "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
-  };
-
-  // Set the required headers for the API request
-  const response = await fetch(
-    `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`,
-    {
-      headers: headers,
-    }
-  );
-
-  // Parse the response as JSON
-  const result = await response.json();
-
-  return result;
+  const { data } = await supabase.from("cars").select();
+  return { data };
 }
+
 

@@ -43,7 +43,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                   className="absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full"
                   onClick={closeModal}
                 >
-                  <Image
+                  <img
                     src="/images/close.svg"
                     alt="close"
                     width={20}
@@ -55,18 +55,18 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                 <div className="flex-1 flex flex-col gap-3">
                   <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                     <Image
-                      src="/images/header.png"
-                      alt="car model"
-                      fill
-                      priority
                       className="object-contain"
+                      src={`/${car.id}.jpeg`}
+                      alt="car model"
+                      width={500}
+                      height={500}
                     />
                   </div>
 
                   <div className="flex gap-3">
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image
-                        src="/images/header.png"
+                        src={`/${car.id}-1.jpeg`}
                         alt="car model"
                         fill
                         priority
@@ -75,7 +75,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                     </div>
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image
-                        src="/images/header.png"
+                        src={`/${car.id}-2.jpeg`}
                         alt="car model"
                         fill
                         priority
@@ -84,7 +84,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                     </div>
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image
-                        src="/images/header.png"
+                        src={`/${car.id}-3.jpeg`}
                         alt="car model"
                         fill
                         priority

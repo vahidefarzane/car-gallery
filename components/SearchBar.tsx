@@ -8,7 +8,7 @@ import SearchManufacturer from "./SearchManufacturer";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
-    <Image
+    <img
       src={"/images/magnifying-glass.svg"}
       alt={"magnifying glass"}
       width={40}
@@ -68,7 +68,7 @@ const SearchBar = () => {
         <SearchButton otherClasses='sm:hidden' />
       </div>
       <div className='searchbar__item'>
-        <Image
+        <img
           src='/images/model-icon.png'
           width={25}
           height={25}
