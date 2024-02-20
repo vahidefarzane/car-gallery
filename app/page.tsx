@@ -1,19 +1,23 @@
 import Header from "../components/Header";
 import { fetchCars } from "@utils";
-import { CarCardProps, HomeProps, CarProps } from "@types";
-import SearchBar from "@components/SearchBar";
+import {HomeProps, CarProps } from "@types";
 import CarCard from "@components/CarCard";
 import CustomFilter from "@components/CustomFilter";
-import { fuels, yearsOfProduction } from "@constants";
-import ShowMore from "@components/ShowMore";
+import { fuels, yearsOfProduction, manufacturers } from "@constants";
 
 export default async function Home({ searchParams }: HomeProps) {
-  const allCars = await fetchCars();
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || "Toyota",
+    year: searchParams.year || 2023,
+    fuel: searchParams.fuel || "gas",
+  });
+
   console.log(allCars);
+  
   const isDataEmpty = !allCars;
 
   return (
-    <main>
+    <main className="bg-gray-800">
       <Header />
 
       <div className="mt-12 padding-x padding-y max-width" id="discover">
@@ -22,11 +26,10 @@ export default async function Home({ searchParams }: HomeProps) {
           <p>Explore out cars you might like</p>
         </div>
         <div className="home__filters">
-          <SearchBar />
-
           <div className="home__filter-container">
             <CustomFilter title="fuel" options={fuels} />
             <CustomFilter title="year" options={yearsOfProduction} />
+            <CustomFilter title="manufacturers" options={manufacturers} />
           </div>
         </div>
         {!isDataEmpty ? (

@@ -37,13 +37,13 @@ const CarCard = ({ car }: CarCardProps) => {
         </span>
       </p>
 
-      <div className="relative w-full h-40 my-3 object-contain">
+      <div className="relative w-full h-64 my-3 object-contain">
         <Image
           src={`/${id}.jpg`}
           alt="car model"
-          fill
           priority
-          className="object-contain"
+          fill
+          className="w-full"
         />
       </div>
 
@@ -71,7 +71,7 @@ const CarCard = ({ car }: CarCardProps) => {
         </div>
 
         <div className="car-card__btn-container">
-          <Link href={`/cars/${id}`} className="w-full">
+          <Link href={`/${id}`} className="w-full">
             <CustomButton
               title="View More"
               containerStyles="w-full py-[16px] rounded-full bg-primary-blue"

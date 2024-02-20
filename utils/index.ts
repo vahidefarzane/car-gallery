@@ -45,16 +45,20 @@ export const deleteSearchParams = (type: string) => {
   return newPathname;
 };
 
-export async function fetchCars() {
-  // const { manufacturer, year, model, limit, fuel } = filters;
+export async function fetchCars(filters: FilterProps) {
+  const { manufacturer, year, fuel } = filters;
 
-  const { data } = await supabase.from("allcars").select("*");
+  const { data } = await supabase
+    .from("allcars")
+    .select("*")
+    .eq("manufacturer", manufacturer)
+    .eq("year", year)
+    .eq("fuel_type", fuel);
   return { data };
 }
 export async function fetchCar(id: number) {
-  // const { manufacturer, year, model, limit, fuel } = filters;
 
   const { data } = await supabase.from("allcars").select("*").eq("id", id);
 
-  return  {data}
+  return { data };
 }
