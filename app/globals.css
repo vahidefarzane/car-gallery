@@ -215,3 +215,42 @@
   @apply cursor-default select-none py-2 pl-10 pr-4;
 }
 /* END: search manufacturer styles */
+
+
+/* START: detail car page styles */
+
+.car-details {
+  @apply bg-gray-800 py-8;
+}
+.car-details__wrapper {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+.car-details__section{
+  @apply md:flex-1 px-4;
+}
+.car-details__main-image-wrapper{
+  @apply h-[395px] rounded-lg bg-gray-800 mb-4;
+}
+.car-details__mini-image-wrapper{
+  @apply flex justify-between gap-0;
+}
+.car-details__title{
+  @apply text-2xl font-bold text-gray-800 dark:text-white mb-2;
+}
+.car-details__table-wrapper{
+  @apply relative overflow-x-auto shadow-md sm:rounded-lg mt-2;
+}
+.car-details__table{
+  @apply w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400;
+}
+.car-details__table-heading{
+  @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+}
+.car-details__table-row{
+  @apply bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600;
+}
+.car-details__table-row-heading{
+  @apply px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white;
+}
+
+/* End: detail car page styles */

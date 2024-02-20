@@ -71,7 +71,7 @@ const CarCard = ({ car }: CarCardProps) => {
         </div>
 
         <div className="car-card__btn-container">
-          <Link href={`/${id}`} className="w-full">
+          <Link href={`/cars/${id}`} className="w-full">
             <CustomButton
               title="View More"
               containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
