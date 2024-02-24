@@ -47,16 +47,15 @@ export async function fetchCars(filters: FilterProps) {
   const { manufacturer, year, fuel, model } = filters;
 
   const response = await fetch(
-    `http://localhost:8000/cars?make=${manufacturer}&year=${year}&fuel_type=${fuel}&model=${model}`
+    `https://car-gallery-backend-1.onrender.com/cars?make=${manufacturer}&year=${year}&fuel_type=${fuel}&model=${model}`
   );
   const result = await response.json();
-  console.log(result);
   
   return result;
 }
 
 export async function fetchCar(id: number) {
-  const response = await fetch(`http://localhost:8000/cars/${id}`);
+  const response = await fetch(`https://car-gallery-backend-1.onrender.com/cars/${id}`);
   const result = await response.json();
 
   return result;

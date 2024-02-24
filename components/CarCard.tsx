@@ -46,7 +46,7 @@ const CarCard = ({ car }: CarCardProps) => {
           loader={supabaseLoader}
           fill
           priority
-          className="object-contain"
+          className="object-cover"
         />
       </div>
 
@@ -58,6 +58,7 @@ const CarCard = ({ car }: CarCardProps) => {
               width={20}
               height={20}
               alt="steering wheel"
+              
             />
             <p className="text-[14px] leading-[17px]">
               {transmission === "a" ? "Automatic" : "Manual"}
@@ -69,6 +70,7 @@ const CarCard = ({ car }: CarCardProps) => {
               width={20}
               height={20}
               alt="seat"
+              className=""
             />
             <p className="car-card__icon-text">{drive.toUpperCase()}</p>
           </div>

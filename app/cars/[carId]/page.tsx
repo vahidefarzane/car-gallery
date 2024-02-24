@@ -13,7 +13,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const car = await fetchCar(params.carId);
   return {
-    title: `${car.model} - ${car.year} `,
+    title: `Sicar | ${car.model} - ${car.year} `,
   };
 }
 
@@ -47,7 +47,7 @@ export default async function carpage({
             <div className="car-details__section">
               <div className="car-details__main-image-wrapper">
                 <Image
-                  src="https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/1.jpg"
+                  src={`https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/${id}.jpg`}
                   alt="car model"
                   // loader={supabaseLoader}
                   width={530}
@@ -56,21 +56,21 @@ export default async function carpage({
               </div>
               <div className="car-details__mini-image-wrapper">
                 <Image
-                  src="https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/1.jpg"
+                  src={`https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/${id}-1.jpg`}
                   // loader={supabaseLoader}
                   alt="car model"
                   width={170}
                   height={200}
                 />
                 <Image
-                  src="https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/1.jpg"
+                  src={`https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/${id}-2.jpg`}
                   // loader={supabaseLoader}
                   alt="car model"
                   width={170}
                   height={200}
                 />
                 <Image
-                  src="https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/1.jpg"
+                  src={`https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/${id}-3.jpg`}
                   // loader={supabaseLoader}
                   alt="car model"
                   width={170}

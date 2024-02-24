@@ -2,7 +2,7 @@ import React from "react";
 
 export default function loading() {
   return (
-    <div className="text-center">
+    <div className="flex justify-center align-center">
       <div role="status">
         <svg
           aria-hidden="true"
