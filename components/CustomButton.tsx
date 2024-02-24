@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
-import { CustomButtonProps } from "../types/index";
+import { CustomButtonProps } from "@types";
 
-const CustomButton = ({ isDisabled, btnType, containerStyles, textStyles, title, rightIcon, handleClick }: CustomButtonProps) => (
+const Button = ({ isDisabled, btnType, containerStyles, textStyles, title, rightIcon, handleClick }: CustomButtonProps) => (
   <button
     disabled={isDisabled}
     type={btnType || "button"}
@@ -14,10 +14,10 @@ const CustomButton = ({ isDisabled, btnType, containerStyles, textStyles, title,
     <span className={`flex-1 ${textStyles}`}>{title}</span>
     {rightIcon && (
       <div className="relative w-6 h-6">
-        <img
+        <Image
           src={rightIcon}
           alt="arrow_left"
-          
+          fill
           className="object-contain"
         />
       </div>
@@ -25,4 +25,4 @@ const CustomButton = ({ isDisabled, btnType, containerStyles, textStyles, title,
   </button>
 );
 
-export default CustomButton;
+export default Button;

@@ -1,28 +1,17 @@
 import "./globals.css";
 
-import Footer from "../components/Footer";
-import NavBar from "../components/Navbar";
-import { Metadata } from "next";
+import NavBar  from "../components/Navbar";
+import Footer  from "../components/Footer";
 
-export const metadata: Metadata = {
-  title: "car Gallery",
+export const metadata = {
+  title: "Car Hub",
   description: "Discover world's best car showcase application",
-  icons: [
-    {
-      url: "/images/favicon.png",
-      href: "/images/favicon.png",
-    },
-  ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="relative bg-gray-800">
+    <html lang='en'>
+      <body className='relative'>
         <NavBar />
         {children}
         <Footer />

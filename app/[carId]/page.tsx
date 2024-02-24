@@ -1,6 +1,4 @@
-import { fetchCar } from "@utils";
 import Image from "next/image";
-import { CarProps } from "@types";
 import { Metadata } from "next";
 
 type Props = {
@@ -9,37 +7,37 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const car = await fetchCar(params.carId);
-  return {
-    title: `${car.data?.[0].model} - ${car.data?.[0].year} `,
-  };
-}
+// export async function generateMetadata({ params }: Props): Promise<Metadata> {
+//   const car = await fetchCar(params.carId);
+//   return {
+//     title: `${car.data?.[0].model} - ${car.data?.[0].year} `,
+//   };
+// }
 
 export default async function carpage({
   params,
 }: {
   params: { carId: number };
 }) {
-  const car = await fetchCar(params.carId);
-  const {
-    id,
-    city_mpg,
-    combination_mpg,
-    cylinders,
-    displacement,
-    drive,
-    fuel_type,
-    highway_mpg,
-    make,
-    model,
-    transmission,
-    year,
-  } = car.data?.[0];
+  // const car = await fetchCar(params.carId);
+  // const {
+  //   id,
+  //   city_mpg,
+  //   combination_mpg,
+  //   cylinders,
+  //   displacement,
+  //   drive,
+  //   fuel_type,
+  //   highway_mpg,
+  //   make,
+  //   model,
+  //   transmission,
+  //   year,
+  // } = car.data?.[0];
 
   return (
     <main>
-      <div className="car-details">
+      {/* <div className="car-details">
         <div className="car-details__wrapper">
           <div className="flex flex-col md:flex-row -mx-4">
             <div className="car-details__section">
@@ -177,7 +175,7 @@ export default async function carpage({
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

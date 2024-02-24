@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 
-import CustomButton from "./CustomButton";
+import  CustomButton  from "../components/CustomButton";
+import supabaseLoader from "../supabase-image-loader"
 
-const Hero = () => {
+const Header = () => {
   const handleScroll = () => {
     const nextSection = document.getElementById("discover");
 
@@ -14,8 +15,8 @@ const Hero = () => {
   };
 
   return (
-    <header className="header">
-      <nav className="flex-1 padding-x">
+    <div className="header">
+      <div className="flex-1 pt-36 padding-x">
         <h1 className="header__title">
           Find, book, rent a car—quick and super easy!
         </h1>
@@ -30,18 +31,17 @@ const Hero = () => {
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
           handleClick={handleScroll}
         />
-      </nav>
+      </div>
       <div className="header__image-container">
         <div className="header__image">
-          <img
-            src="/images/header.png"
-            alt="header"
-            className="object-contain"
-          />
+          <Image src="/localImages/header.png" alt="header" fill className="object-contain" />
         </div>
+        
+
+        <div className="header__image-overlay" />
       </div>
-    </header>
+    </div>
   );
 };
 
-export default Hero;
+export default Header;

@@ -28,6 +28,7 @@ module.exports = {
       },
       backgroundImage: {
         pattern: "url('/pattern.png')",
+        'header-bg': "url('/localImages/header-bg.png')"
       },
     },
   },

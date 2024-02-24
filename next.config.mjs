@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    loader: "custom",
-    loaderFile: "./supabase-image-loader.js",
-    
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'tvleyqfprpfmegrcnshe.supabase.co',
+        port: '',
+        pathname: '/storage/v1/object/public/images/**',
+      },
+    ],
   },
 };
 
