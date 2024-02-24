@@ -57,7 +57,7 @@
 .header__image {
   @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
 }
-.header__image-overlay  {
+.header__image-overlay {
   @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-header-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
 }
 /* END: Header styles */
@@ -127,7 +127,7 @@
 }
 
 .car-card__btn-container {
-  @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
+  @apply hidden group-hover:flex absolute bottom-0 w-full z-10 flex justify-between gap-1;
 }
 /* END: Car Card styles */
 
@@ -218,8 +218,8 @@
 /* END: search manufacturer styles */
 
 /* START: detail car page styles  */
- .car-details {
-  @apply bg-gray-800 py-8;
+.car-details {
+  @apply py-8 mt-4;
 }
 .car-details__wrapper {
   @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
@@ -228,28 +228,28 @@
   @apply md:flex-1 px-4;
 }
 .car-details__main-image-wrapper {
-  @apply h-[395px] rounded-lg bg-gray-800 mb-4;
+  @apply h-[395px] rounded-lg  mb-4;
 }
 .car-details__mini-image-wrapper {
   @apply flex justify-between gap-0;
 }
 .car-details__title {
-  @apply text-2xl font-bold text-white  mb-2;
+  @apply text-2xl font-bold text-black-100  mb-2;
 }
 .car-details__table-wrapper {
-  @apply relative overflow-x-auto shadow-md sm:rounded-lg mt-2;
+  @apply relative overflow-x-auto shadow-md sm:rounded-lg mt-8;
 }
 .car-details__table {
-  @apply w-full text-sm text-left rtl:text-right text-gray-500 mt-3;
+  @apply w-full text-sm text-left rtl:text-right text-black-100;
 }
 .car-details__table-heading {
-  @apply text-xs uppercase bg-gray-700 text-gray-400;
+  @apply text-xs uppercase text-black-100;
 }
 .car-details__table-row {
-  @apply border-b bg-gray-800 border-gray-700 hover:bg-gray-600;
+  @apply border-b text-black-100 border-gray-200 hover:bg-gray-100;
 }
 .car-details__table-row-heading {
-  @apply px-6 py-4 font-medium  whitespace-nowrap text-white;
+  @apply px-6 py-4 font-medium  whitespace-nowrap text-black-100;
 }
 
 /* End: detail car page styles */

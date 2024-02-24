@@ -15,7 +15,7 @@ const Button = ({ isDisabled, btnType, containerStyles, textStyles, title, right
     {rightIcon && (
       <div className="relative w-6 h-6">
         <Image
-          src={rightIcon}
+          src="/localImages/right-arrow.svg"
           alt="arrow_left"
           fill
           className="object-contain"

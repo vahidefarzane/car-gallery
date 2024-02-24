@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { fetchCar } from "@utils";
+import supabaseLoader from "../../../supabase-image-loader";
+import CustomButton from "../../../components/CustomButton";
 
 type Props = {
   params: {
@@ -7,66 +10,79 @@ type Props = {
   };
 };
 
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const car = await fetchCar(params.carId);
-//   return {
-//     title: `${car.data?.[0].model} - ${car.data?.[0].year} `,
-//   };
-// }
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const car = await fetchCar(params.carId);
+  return {
+    title: `${car.model} - ${car.year} `,
+  };
+}
 
 export default async function carpage({
   params,
 }: {
   params: { carId: number };
 }) {
-  // const car = await fetchCar(params.carId);
-  // const {
-  //   id,
-  //   city_mpg,
-  //   combination_mpg,
-  //   cylinders,
-  //   displacement,
-  //   drive,
-  //   fuel_type,
-  //   highway_mpg,
-  //   make,
-  //   model,
-  //   transmission,
-  //   year,
-  // } = car.data?.[0];
+  const car = await fetchCar(params.carId);
+
+  const {
+    id,
+    city_mpg,
+    combination_mpg,
+    cylinders,
+    displacement,
+    drive,
+    fuel_type,
+    highway_mpg,
+    make,
+    model,
+    transmission,
+    year,
+  } = car;
 
   return (
     <main>
-      {/* <div className="car-details">
+      <div className="car-details">
         <div className="car-details__wrapper">
           <div className="flex flex-col md:flex-row -mx-4">
             <div className="car-details__section">
               <div className="car-details__main-image-wrapper">
                 <Image
-                  src={`/${id}.jpg`}
+                  src="https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/1.jpg"
                   alt="car model"
+                  // loader={supabaseLoader}
                   width={530}
                   height={500}
                 />
               </div>
               <div className="car-details__mini-image-wrapper">
                 <Image
-                  src={`/${id}-1.jpg`}
+                  src="https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/1.jpg"
+                  // loader={supabaseLoader}
                   alt="car model"
                   width={170}
                   height={200}
                 />
                 <Image
-                  src={`/${id}-2.jpg`}
+                  src="https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/1.jpg"
+                  // loader={supabaseLoader}
                   alt="car model"
                   width={170}
                   height={200}
                 />
                 <Image
-                  src={`/${id}-3.jpg`}
+                  src="https://tvleyqfprpfmegrcnshe.supabase.co/storage/v1/object/public/images/1.jpg"
+                  // loader={supabaseLoader}
                   alt="car model"
                   width={170}
                   height={200}
+                />
+              </div>
+              <div>
+                <CustomButton
+                  title="Rent"
+                  containerStyles="w-full py-[16px] rounded-full bg-primary-blue mt-4"
+                  textStyles="text-white text-[14px] leading-[17px] font-bold"
+                  
                 />
               </div>
             </div>
@@ -175,7 +191,7 @@ export default async function carpage({
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </main>
   );
 }

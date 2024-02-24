@@ -3,7 +3,6 @@
 import Image from "next/image";
 
 import  CustomButton  from "../components/CustomButton";
-import supabaseLoader from "../supabase-image-loader"
 
 const Header = () => {
   const handleScroll = () => {

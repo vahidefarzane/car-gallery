@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { CarProps } from "@types";
-import { generateCarImageUrl } from "@utils";
+import supabaseLoader from "../supabase-image-loader"
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -55,7 +55,8 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                 <div className="flex-1 flex flex-col gap-3">
                   <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                     <Image
-                      src="/1.jpg"
+                      src={`${car.id}.jpg`}
+                      loader={supabaseLoader}
                       alt="car model"
                       fill
                       priority
@@ -66,7 +67,8 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                   <div className="flex gap-3">
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image
-                        src="/1-1.jpg"
+                        src={`${car.id}-1.jpg`}
+                        loader={supabaseLoader}
                         alt="car model"
                         fill
                         priority
@@ -75,7 +77,8 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                     </div>
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image
-                        src="/1-2.jpg"
+                       src={`${car.id}-2.jpg`}
+                       loader={supabaseLoader}
                         alt="car model"
                         fill
                         priority
@@ -84,7 +87,8 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                     </div>
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image
-                        src="/1-3.jpg"
+                       src={`${car.id}-3.jpg`}
+                       loader={supabaseLoader}
                         alt="car model"
                         fill
                         priority
