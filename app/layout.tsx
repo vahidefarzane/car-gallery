@@ -6,6 +6,9 @@ import Footer from "../components/Footer";
 export const metadata = {
   title: "Sicar | Car gallery",
   description: "Discover world's best car showcase application",
+  icons: {
+    icon: '/localImages/favicon.png',
+  },
 };
 
 export default function RootLayout({
