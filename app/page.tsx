@@ -8,10 +8,10 @@ import Header from "../components/Header";
 
 export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars({
-    manufacturer: searchParams.manufacturer || "",
+    manufacturer: searchParams.manufacturer || "toyota",
     year: searchParams.year || 2022,
-    fuel: searchParams.fuel || "",
-    model: searchParams.model || "",
+    fuel: searchParams.fuel || "gas",
+    model: searchParams.model || "corolla",
   });
 
   const isDataEmpty =
