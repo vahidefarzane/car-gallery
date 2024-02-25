@@ -7,7 +7,6 @@ import CustomFilter from "../components/CustomFilter";
 import Header from "../components/Header";
 
 export default async function Home({ searchParams }: HomeProps) {
-  // const cars = await fetchCars();
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
